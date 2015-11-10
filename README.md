@@ -50,7 +50,7 @@ Both getting and creating a poll will return a `Poll` object. The `Poll` object 
 * bool `captcha`: Does the poll require users to pass a CAPTCHA to vote?
 * str `dupcheck`: How to handle checking for duplicate votes {"normal", "permissive", "disabled"}
 
-You can get percentage values of each vote using `p.percentages()`, with an optional `rounding` paramater which defaults to 2 decimal places.
+You can get percentage values of each vote using `p.normalise()`, with an optional `rounding` paramater which defaults to 2 decimal places.
 
 You can fetch fresh voting values for the poll by using `p.refresh()`.
 
