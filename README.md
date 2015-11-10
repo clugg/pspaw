@@ -67,7 +67,7 @@ u'What movie should we watch'
 64644
 >>> p.results
 {u'Witchhunter': 7928, u'Prison logic': 7008, u'Sucker punch ': 16425, u'Pirates of carribian ': 33283}
->>> p.percentages()
+>>> p.normalise()
 {u'Witchhunter': 12.26, u'Prison logic': 10.84, u'Sucker punch ': 25.41, u'Pirates of carribian ': 51.49}
 ```
 
