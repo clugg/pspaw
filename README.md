@@ -19,7 +19,7 @@ In order to change the User-Agent that all requests are performed with, you must
 
 ```python
 pspaw.poll.request.USERAGENT = "my app v1.0.0"
-```python
+```
 
 ### Error Handling
 
@@ -32,7 +32,7 @@ PSPAW's `request` module handles all GET and POST requests performed to the API,
 ... except pspaw.errors.PSPAWBaseException as e:
 ...     print("Error #{}: {}".format(e.code, e.msg))
 Error #41: Poll not found
-```python
+```
 
 ### Usage
 
@@ -69,7 +69,7 @@ u'What movie should we watch'
 {u'Witchhunter': 7928, u'Prison logic': 7008, u'Sucker punch ': 16425, u'Pirates of carribian ': 33283}
 >>> p.normalise()
 {u'Witchhunter': 12.26, u'Prison logic': 10.84, u'Sucker punch ': 25.41, u'Pirates of carribian ': 51.49}
-```python
+```
 
 #### Creating a Poll
 
@@ -78,4 +78,4 @@ u'What movie should we watch'
 >>> p = pspaw.poll.create(title="Is PSPAW a cool project?", options=["Yes", "No"], multi=False, dupcheck="permissive", captcha=True)
 >>> p.id
 5941011
-```python
+```
