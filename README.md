@@ -17,22 +17,22 @@ For the sake of the usage guide we will be using `import pspaw`.
 
 In order to change the User-Agent that all requests are performed with, you must set the `pspaw.poll.request.USERAGENT` variable to whatever you wish the User-Agent to be.
 
-```
+```python
 pspaw.poll.request.USERAGENT = "my app v1.0.0"
-```
+```python
 
 ### Error Handling
 
 PSPAW's `request` module handles all GET and POST requests performed to the API, and more specifically detects when an error is returned by the API. All errors the `request` module detects will be raised as `pspaw.errors.PSPAWBaseException` exceptions. The `pspaw.errors.PSPAWBaseException` exception has two main important properties: `code` and `msg`. `code` is the error-code returned by the API (if there is one), and `msg` is the error string returned by the API.
 
-```
+```python
 >>> import pspaw
 >>> try:
 ...    p = pspaw.poll.get(-1)
 ... except pspaw.errors.PSPAWBaseException as e:
 ...     print("Error #{}: {}".format(e.code, e.msg))
 Error #41: Poll not found
-```
+```python
 
 ### Usage
 
@@ -56,7 +56,7 @@ You can fetch fresh voting values for the poll by using `p.refresh()`.
 
 #### Getting a Poll
 
-```
+```python
 >>> import pspaw
 >>> p = pspaw.poll.get(1)
 >>> p.id
@@ -69,13 +69,13 @@ u'What movie should we watch'
 {u'Witchhunter': 7928, u'Prison logic': 7008, u'Sucker punch ': 16425, u'Pirates of carribian ': 33283}
 >>> p.normalise()
 {u'Witchhunter': 12.26, u'Prison logic': 10.84, u'Sucker punch ': 25.41, u'Pirates of carribian ': 51.49}
-```
+```python
 
 #### Creating a Poll
 
-```
+```python
 >>> import pspaw
 >>> p = pspaw.poll.create(title="Is PSPAW a cool project?", options=["Yes", "No"], multi=False, dupcheck="permissive", captcha=True)
 >>> p.id
 5941011
-```
+```python
