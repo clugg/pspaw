@@ -2,6 +2,13 @@
 
 PSPAW, an acronym for "Python StrawPoll API Wrapper", is a Python package that allows for simple access to StrawPoll's API. PSPAW aims to be as easy to use as possible and is developed based on official documentation [found here](https://github.com/strawpoll/strawpoll/wiki/API). PSPAW does it's best to deal with deprecation, specifically relating to changes between the earlier polls and the newer ones.
 
+## Prerequisites
+
+* Python 2.7+ or Python 3.0+
+* [python-requests](https://requests.kennethreitz.org/)
+
+A compatible version of `python-requests` can be installed via `$ pip install -r requirements.txt`.
+
 ## Documentation
 
 ### Importing
